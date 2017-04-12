@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Practicing basic css: Tic Tac Toe board</title>
+
+<style> /* In this simple exercise I'll keep the styling in the same file */
+	
+	table {
+		margin: auto;
+	}
+	
+	h1 {
+		text-align: center;
+	}
+	
+	td {
+		width: 100px;
+		height: 100px;
+/* 		background: green; */
+	}
+	
+	.horizontal {
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+	}
+	
+	.vertical {
+		border-left: 1px solid black;
+		border-right: 1px solid black;
+	}
+	
+</style>
+
+</head>
+<body>
+	<h3>Practicing basic css: Tic Tac Toe board</h3>
+	
+	<h1>Tic Tac Toe Board</h1>
+	
+	<table>
+		<tr> <!-- 1st row -->
+			<td></td>
+			<td class="vertical"></td>
+			<td></td>
+		</tr>
+		<tr> <!-- 2nd row -->
+			<td class="horizontal"></td>
+			<td class="horizontal vertical"></td>
+			<td class="horizontal"></td>
+		</tr>
+		<tr> <!-- 3d row -->
+			<td></td>
+			<td class="vertical"></td>
+			<td></td>
+		</tr>
+	</table>
+</body>
+</html>
