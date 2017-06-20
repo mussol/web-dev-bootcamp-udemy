@@ -1,0 +1,33 @@
+<% include partials/header %>
+
+<div class="ui main text container">
+    <div class="ui huge header">RESTful Blog App</div>
+    <div class="ui top attached segment">
+        <div class="ui divided items">
+            <% blogs.forEach(function(blog) { %>
+                <div class="item">
+                    <div class="image">
+                        <img src="<%= blog.image %>">
+                    </div>
+                    <div class="content">
+                        <a class="header" href="/blogs/<%= blog._id %>"><%= blog.title %></a>
+                        <div class="meta">
+                            <span><%= blog.created.toDateString() %></span>
+                        </div>
+                        <div class="description">
+                            <p><%- blog.body.substring(0, 100) %>...</p> <!-- notice the "-" sign instead of "=" in our JS, it compiles instead of showing the content, so users can type the blog content in html -->
+                        </div>
+                        <div class="extra">
+                            <a class="ui loaded basic primary button" href="/blogs/<%= blog._id %>">
+                                Read More
+                                <i class="chevron right icon"></i>
+                            </a>
+                        </div>
+                    </div><!--.content-->
+                </div><!--.item-->
+            <% }); %>
+        </div><!--.items-->
+    </div><!--.segment-->
+</div><!--.container-->
+
+<% include partials/footer %>
